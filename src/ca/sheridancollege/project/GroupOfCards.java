@@ -1,7 +1,7 @@
 /**
  * SYST 17796 Project Base code.
  * Students can modify and extend to implement their game.
- * Authors: Muhammad Atiq, Juan Rios,  Bonita Li,
+ * Authors: Muhammad Atiq, Juan Rios,  Bonita Li, Divya Srinivasan
  * Date:
  */
 package ca.sheridancollege.project;
