@@ -8,6 +8,7 @@ import java.util.ArrayList;
 /**
  *
  * @author izanr
+ * Date:22/04/2022
  */
 public class Deck extends GroupOfCards{
     private ArrayList<Card> cards;
