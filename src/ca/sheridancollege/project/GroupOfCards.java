@@ -22,7 +22,7 @@ public class GroupOfCards
 {
 
    //The group of cards, stored in an ArrayList
-   private ArrayList<Card> cards;
+   ArrayList<NumberCard> cards = new ArrayList<>();
    private int size;//the size of the grouping
 
    public GroupOfCards (int size)
@@ -35,7 +35,7 @@ public class GroupOfCards
     *
     * @return the group of cards.
     */
-   public ArrayList<Card> getCards ()
+   public ArrayList<NumberCard> getCards ()
    {
       return cards;
    }

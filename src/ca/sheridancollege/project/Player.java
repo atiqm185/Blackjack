@@ -13,9 +13,11 @@ package ca.sheridancollege.project;
  * @author dancye
  * @author Paul Bonenfant Jan 2020
  */
-public abstract class Player
-{
+public abstract class Player{
 
+    //instance of deck, used for drawing cards
+    Deck deck = new Deck();
+    
    private String name; //the unique name for this player
 
    /**
@@ -33,7 +35,7 @@ public abstract class Player
     */
    public String getName ()
    {
-      return name;
+      return this.name;
    }
 
    /**
@@ -45,12 +47,16 @@ public abstract class Player
    {
       this.name = name;
    }
+   
+   public NumberCard getCard(){
+       return deck.getRandom();
+   }
 
    /**
     * The method to be overridden when you subclass the Player class with your
     * specific type of Player and filled in
     * with logic to play your game.
     */
-//   public abstract void play ();
+   public abstract void play ();
 //
 }

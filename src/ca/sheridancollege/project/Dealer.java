@@ -11,13 +11,25 @@ import java.util.ArrayList;
  * @author izanr
  * Date:22/04/2022
  */
-public class Dealer {
-    private ArrayList<Card> hand;
-    Dealer(){};
+public class Dealer extends Player{
+    
+    private ArrayList<NumberCard> hand = new ArrayList<>();
+    public Dealer(){
+        super("dealer");
+    }
     public void startNewGame(){
-        //code
+        this.hand.add(super.getCard());
+        this.hand.add(super.getCard());
+        System.out.println("New Game Started!");
     }
     public void showHand(){
-        //code
+        System.out.println("Dealers Hand:");
+        for(NumberCard e: hand){
+            System.out.println(e.toString());
+        }
+    }
+    //method to take dealer's turn
+    public void play(){
+        
     }
 }

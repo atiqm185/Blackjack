@@ -13,6 +13,7 @@ public class UserPlayer extends Player{
     private int wallet = 1000;
     private int bet;
     UserPlayer(int playerBet){
+        super("Player");
         this.bet = playerBet;
     }
     public void splitHand(){
@@ -23,5 +24,8 @@ public class UserPlayer extends Player{
     }
     public void surrender(){
         //code
+    }
+    public void play(){
+        
     }
 }

@@ -9,7 +9,16 @@ package ca.sheridancollege.project;
  * @author izanr
  */
 public class NumberCard extends Card{
-    public String toString(){
-        //code here
+    String suit;
+    int value;
+
+    public NumberCard(String suit, int value) { //NumberCard constructor
+        this.suit = suit;
+        this.value = value;
+    }
+
+    @Override
+    public String toString() { //toString method for NumberCard
+        return value + " of " + suit;
     }
 }
