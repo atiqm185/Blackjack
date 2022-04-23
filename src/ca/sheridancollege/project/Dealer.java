@@ -17,11 +17,14 @@ public class Dealer extends Player{
     public Dealer(){
         super("dealer");
     }
+    
     public void startNewGame(){
-        this.hand.add(super.getCard());
-        this.hand.add(super.getCard());
+        this.draw();
+        this.draw();
         System.out.println("New Game Started!");
+        this.showHand();
     }
+    
     public void showHand(){
         System.out.println("Dealers Hand:");
         for(NumberCard e: hand){
@@ -29,7 +32,36 @@ public class Dealer extends Player{
         }
     }
     //method to take dealer's turn
+    @Override
     public void play(){
-        
+        if(this.getHandValue() < 17){
+            this.draw();
+            this.showHand();
+        }
+        else{
+            System.out.println("Dealer stands...");
+            this.showHand();
+        }
+    }
+    
+    public boolean canPlay(){
+        return this.getHandValue() < 21;
+    }
+    
+    public int getHandValue(){
+        int value = 0;
+        for(NumberCard e: hand){
+            if(e.getValue() > 10){
+                value += 10;
+            }
+            else{
+                value += e.getValue();
+            }
+        }
+        return value;
+    }
+    
+    public void draw(){
+        this.hand.add(super.getCard());
     }
 }

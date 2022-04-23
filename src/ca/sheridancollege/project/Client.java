@@ -10,8 +10,7 @@ package ca.sheridancollege.project;
  */
 public class Client {
     public static void main(String[] args) {
-        Dealer deal = new Dealer();
-        deal.startNewGame();
-        deal.showHand();
+        BlackJack game = new BlackJack();
+        game.play();
     }
 }

@@ -19,6 +19,23 @@ public class NumberCard extends Card{
 
     @Override
     public String toString() { //toString method for NumberCard
-        return value + " of " + suit;
+        switch(this.value){
+            case 11:
+                return "Jack" + " of " + suit;
+            case 12:
+                return "Queen" + " of " + suit;
+            case 13:
+                return "King" + " of " + suit;
+            default:
+                return value + " of " + suit;
+        }
+    }
+    
+    public int getValue(){
+        return this.value;
+    }
+    
+    public String getSuit(){
+        return this.suit;
     }
 }

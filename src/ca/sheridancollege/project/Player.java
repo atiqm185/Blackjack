@@ -57,6 +57,9 @@ public abstract class Player{
     * specific type of Player and filled in
     * with logic to play your game.
     */
-   public abstract void play ();
-//
+   public abstract void play();
+   
+   public abstract boolean canPlay();
+   
+   public abstract int getHandValue();
 }
