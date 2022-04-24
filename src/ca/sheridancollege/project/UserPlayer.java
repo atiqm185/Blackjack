@@ -13,11 +13,13 @@ public class UserPlayer extends Player{
     private ArrayList<NumberCard> hand = new ArrayList<>();
     private int wallet = 1000;
     private int bet;
+    
     UserPlayer(int playerBet){
         super("Player");
         this.bet = playerBet;
         this.wallet -= playerBet;
     }
+    
     public void doubleDown(){
         //code
     }
@@ -29,6 +31,7 @@ public class UserPlayer extends Player{
         this.showHand();
         //check for bust or win
     }
+    
     public void play(){
         Scanner in = new Scanner(System.in);
         int input = 0;
@@ -73,7 +76,7 @@ public class UserPlayer extends Player{
         }
     }
     public boolean canPlay(){
-        return this.getHandValue() < 21;
+        return this.getHandValue() <= 21;
     }
     
     public int getHandValue(){
